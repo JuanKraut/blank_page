@@ -45,7 +45,7 @@ npm install --save-dev
 ```
 npm install --save-dev babel-preset-react
 ```
-
-
-
+```
+npm install --save react react-dom
+```
 
