@@ -36,13 +36,16 @@ npm install --save-dev
             babel-polyfill
             babel-plugin-transform-regenerator**
 ```
-`touch .babelrc` and include *{ "presets": [*], "plugins": [**] }* @package.json, and also as entry @webpack.config.js
+`touch .babelrc` and include `{ "presets": [*], "plugins": [**] }` @package.json, and also as entry @webpack.config.js
+
+---
+# Using React.js
 
 ## React
 ```
 npm install --save-dev babel-preset-react
 ```
 
----
+
 
 
