@@ -48,6 +48,7 @@ npm install --save-dev babel-preset-react
 ```
 npm install --save react react-dom
 ```
+...and then set webpack's module rule for react.
 
 ---
 # Using Vue.js
@@ -59,3 +60,4 @@ npm install --save-dev vue-hot-reload-api vue-html-loader vue-loader vue-templat
 ```
 npm install --save vue
 ```
+...and then set webpack's module rule for vue and the resolve object.
