@@ -33,7 +33,7 @@ module.exports = {
   * https://webpack.js.org/plugins/html-webpack-plugin/
   */
   plugins: [
-    new HtmlWebpackPlugin({ title: 'blank_page', template: './src/index.html'}),
+    new HtmlWebpackPlugin({ title: 'Vue env', template: './src/index.html', inject: 'body'}),
     new ExtractTextPlugin({ filename: 'app.bundle.css' })
   ],
   /*
@@ -52,8 +52,22 @@ module.exports = {
         test: /\.(js)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
       }
     ]
+  },
+  /*
+  * The resolve object allows you to configure how webpack’s module resolution works. 
+  * In this case, we’re aliasing the package vue to vue/dist/vue.esm.js, which provides 
+  * Vue in ES2017 Module format.
+  */
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    }
   }
   /*
   *

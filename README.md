@@ -49,3 +49,13 @@ npm install --save-dev babel-preset-react
 npm install --save react react-dom
 ```
 
+---
+# Using Vue.js
+
+## Vue
+```
+npm install --save-dev vue-hot-reload-api vue-html-loader vue-loader vue-template-compiler
+```
+```
+npm install --save vue
+```

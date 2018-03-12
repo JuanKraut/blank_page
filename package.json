@@ -28,8 +28,15 @@
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.2",
+    "vue-hot-reload-api": "^2.3.0",
+    "vue-html-loader": "^1.2.4",
+    "vue-loader": "^14.2.1",
+    "vue-template-compiler": "^2.5.15",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.10",
     "webpack-dev-server": "^3.1.0"
+  },
+  "dependencies": {
+    "vue": "^2.5.15"
   }
 }
