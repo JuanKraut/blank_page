@@ -31,9 +31,10 @@ module.exports = {
   },
   /* PLUGINS
   * https://webpack.js.org/plugins/html-webpack-plugin/
+  * 
   */
   plugins: [
-    new HtmlWebpackPlugin({ title: 'blank_page', template: './src/index.html'}),
+    new HtmlWebpackPlugin({ title: 'React env', template: './src/index.html', inject: 'body'}),
     new ExtractTextPlugin({ filename: 'app.bundle.css' })
   ],
   /*
@@ -50,6 +51,11 @@ module.exports = {
       },
       {
         test: /\.(js)$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
+      },
+      {
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: ['babel-loader']
       }
