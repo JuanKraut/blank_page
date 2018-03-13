@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -34,7 +35,8 @@ module.exports = {
   */
   plugins: [
     new HtmlWebpackPlugin({ title: 'blank_page', template: './src/index.html'}),
-    new ExtractTextPlugin({ filename: 'app.bundle.css' })
+    new ExtractTextPlugin({ filename: 'app.bundle.css' }),
+    new CopyWebpackPlugin([{ from: 'src/img' , to: 'img' }])
   ],
   /*
   * 

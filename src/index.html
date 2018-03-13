@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
-  <h1><%= htmlWebpackPlugin.options.title %></h1>
+  <h1>
+    <%= htmlWebpackPlugin.options.title %>
+  </h1>
+  <section class="user-control">
+
+    <button type="button" class="btn btn-outline-primary" onclick="openModal()">
+      Login
+    </button>
+
+    <div class="is-hidden modal-overlay">
+      <div class="modal-vanilla">
+          <span class="close-button">x</span>
+
+        <form class="login-form">
+          <div class="form-group">
+            <label for="user">User</label>
+            <input type="test" class="form-control" placeholder="User">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+        </form>
+      </div>
+    </div>
+
+  </section>
 </body>
+
 </html>
