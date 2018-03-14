@@ -1,0 +1,54 @@
+.control-percentage {
+  text-align: center;
+  margin: 15px auto;
+  font-size: 2em;
+  display: flex;
+  width: 600px;
+  justify-content: center;
+  &:last-child {
+    margin-left: auto;
+  }
+  a {
+    cursor: pointer;
+    margin: 0 10px;
+    &.add:active {
+      color: green;
+    }
+    &.substract:active {
+      color: red;
+    }
+    &:last-child {
+      margin-left: auto ;
+    }
+  }
+}
+
+.progress-box {
+  height: 51px;
+  width: 600px;
+  background-color: lightgray;
+  border-radius: 10px;
+  margin: auto; 
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  align-items: center;
+  .percentage {
+    font-size: 1.5em;
+    position: absolute;
+    z-index: 1;
+    font-weight: bold;
+    
+  }
+  .background-percentage {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  height: 49px;
+  border-radius: 8px;
+  background-color: red;
+  transition: width 1s ease;
+  }
+}

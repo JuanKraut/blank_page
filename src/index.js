@@ -1,6 +1,6 @@
 import './styles.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App.jsx';
+import ProgressBar from './components/progressBar/ProgressBar.jsx';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<ProgressBar />, document.getElementById('root'));
