@@ -30,14 +30,6 @@ module.exports = {
   devServer: {
     contentBase: './dist/'
   },
-  /* PLUGINS
-  * https://webpack.js.org/plugins/html-webpack-plugin/
-  */
-  plugins: [
-    new HtmlWebpackPlugin({ title: 'blank_page', template: './src/index.html'}),
-    new ExtractTextPlugin({ filename: 'app.bundle.css' }),
-    new CopyWebpackPlugin([{ from: 'src/img' , to: 'img' }])
-  ],
   /*
   * 
   */
@@ -54,10 +46,20 @@ module.exports = {
         test: /\.(js)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
+      },
+      {
+        test: /\.html$/,
+        exclude: /node_modules/,
+        use: ['html-loader']
       }
     ]
-  }
-  /*
-  *
+  },
+    /* PLUGINS
+  * https://webpack.js.org/plugins/html-webpack-plugin/
   */
+ plugins: [
+  new HtmlWebpackPlugin({ template: './src/index.html', title: 'blank_page' }),
+  new ExtractTextPlugin({ filename: 'styles.bundle.css' }),
+  new CopyWebpackPlugin([{ from: 'src/img' , to: 'img' }])
+]
 };

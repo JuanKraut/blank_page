@@ -1,0 +1,27 @@
+<div class="is-hidden modal-overlay">
+  <div class="modal-vanilla">
+      <span class="close-button">x</span>
+    <form class="login-form" onsubmit="return false">
+      <div class="form-group">
+        <label for="user">User</label>
+        <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend2">U</span>
+        </div>
+        <input type="test" class="form-control user-name" placeholder="User"
+               onkeyup="handleChange(this.value)">
+              </div>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend2">P</span>
+        </div>
+        <input type="password" class="form-control user-pass" placeholder="Password">
+      </div>
+      </div>
+      <button onclick="login()" class="btn btn-primary btn-lg btn-block">Login</button>
+    </form>
+  </div>
+  </div>
